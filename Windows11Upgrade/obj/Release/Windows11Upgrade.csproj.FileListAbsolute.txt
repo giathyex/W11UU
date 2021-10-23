@@ -31,3 +31,15 @@ C:\Users\giath\Desktop\Windows11Upgrade-main\Windows11Upgrade-main\Windows11Upgr
 C:\Users\giath\Documents\GitHub\W11UU\Windows11Upgrade\bin\Release\Windows11UnsupportedUpgrade.exe.config
 C:\Users\giath\Documents\GitHub\W11UU\Windows11Upgrade\obj\Release\Windows11UnsupportedUpgrade.exe
 C:\Users\giath\Documents\GitHub\W11UU\Windows11Upgrade\obj\Release\Windows11UnsupportedUpgrade.pdb
+C:\Users\giath\Documents\GitHub\W11UU\Windows11Upgrade\obj\Release\Windows11Upgrade.csprojResolveAssemblyReference.cache
+C:\Users\giath\Documents\GitHub\W11UU\Windows11Upgrade\obj\Release\Windows11Upgrade.win11_downloadSelection.resources
+C:\Users\giath\Documents\GitHub\W11UU\Windows11Upgrade\obj\Release\Windows11Upgrade.win11_upgradeSelection.resources
+C:\Users\giath\Documents\GitHub\W11UU\Windows11Upgrade\obj\Release\Windows11Upgrade.Properties.Resources.resources
+C:\Users\giath\Documents\GitHub\W11UU\Windows11Upgrade\obj\Release\Windows11Upgrade.csproj.GenerateResource.Cache
+C:\Users\giath\Documents\GitHub\W11UU\Windows11Upgrade\bin\Release\Windows11UnsupportedUpgrade.exe
+C:\Users\giath\Documents\GitHub\W11UU\Windows11Upgrade\bin\Release\Windows11UnsupportedUpgrade.pdb
+C:\Users\giath\Documents\GitHub\W11UU\Windows11Upgrade\bin\Release\HtmlAgilityPack.dll
+C:\Users\giath\Documents\GitHub\W11UU\Windows11Upgrade\bin\Release\Newtonsoft.Json.dll
+C:\Users\giath\Documents\GitHub\W11UU\Windows11Upgrade\bin\Release\HtmlAgilityPack.pdb
+C:\Users\giath\Documents\GitHub\W11UU\Windows11Upgrade\bin\Release\HtmlAgilityPack.xml
+C:\Users\giath\Documents\GitHub\W11UU\Windows11Upgrade\bin\Release\Newtonsoft.Json.xml
