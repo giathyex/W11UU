@@ -30,277 +30,303 @@ namespace Windows11Upgrade
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(win11_downloadSelection));
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.labelk = new System.Windows.Forms.Label();
-            this.buttonu = new System.Windows.Forms.Button();
-            this.buttonshell = new System.Windows.Forms.Button();
-            this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
-            this.pictureBoxshell = new System.Windows.Forms.PictureBox();
-            this.buttonshell2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.Label();
-            this.backgroundWorker3 = new System.ComponentModel.BackgroundWorker();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxshell)).BeginInit();
+            this.curver = new System.Windows.Forms.Label();
+            this.curver_build = new System.Windows.Forms.Label();
+            this.newver = new System.Windows.Forms.Label();
+            this.updatestat = new System.Windows.Forms.Label();
+            this.newver_build = new System.Windows.Forms.Label();
+            this.logo = new System.Windows.Forms.PictureBox();
+            this.beginlabel = new System.Windows.Forms.Label();
+            this.beginsublabel = new System.Windows.Forms.Label();
+            this.checkupbutton = new System.Windows.Forms.Button();
+            this.footlabel = new System.Windows.Forms.Label();
+            this.loadingbar1 = new System.Windows.Forms.PictureBox();
+            this.parseHTML = new System.ComponentModel.BackgroundWorker();
+            this.newver_kb = new System.Windows.Forms.Label();
+            this.downbutton = new System.Windows.Forms.Button();
+            this.shellbuttonkb = new System.Windows.Forms.Button();
+            this.shellKBrunner = new System.ComponentModel.BackgroundWorker();
+            this.loadingbar2 = new System.Windows.Forms.PictureBox();
+            this.wusabutton = new System.Windows.Forms.Button();
+            this.powershelloutput = new System.Windows.Forms.Label();
+            this.wusacallshell = new System.ComponentModel.BackgroundWorker();
+            this.errorlabel = new System.Windows.Forms.Label();
+            this.errordetail = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loadingbar1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loadingbar2)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // curver
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(70, 66);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(303, 21);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Phiên bản Windows đang được cài đặt";
-            this.label1.Visible = false;
+            this.curver.AutoSize = true;
+            this.curver.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.curver.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.curver.Location = new System.Drawing.Point(70, 66);
+            this.curver.Name = "curver";
+            this.curver.Size = new System.Drawing.Size(303, 21);
+            this.curver.TabIndex = 5;
+            this.curver.Text = "Phiên bản Windows đang được cài đặt";
+            this.curver.Visible = false;
             // 
-            // label3
+            // curver_build
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label3.Location = new System.Drawing.Point(70, 101);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 20);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Build";
-            this.label3.Visible = false;
+            this.curver_build.AutoSize = true;
+            this.curver_build.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.curver_build.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.curver_build.Location = new System.Drawing.Point(70, 101);
+            this.curver_build.Name = "curver_build";
+            this.curver_build.Size = new System.Drawing.Size(43, 20);
+            this.curver_build.TabIndex = 7;
+            this.curver_build.Text = "Build";
+            this.curver_build.Visible = false;
             // 
-            // label4
+            // newver
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label4.Location = new System.Drawing.Point(70, 161);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(311, 21);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Bản cập nhật mới nhất cho Windows 11";
-            this.label4.Visible = false;
+            this.newver.AutoSize = true;
+            this.newver.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newver.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.newver.Location = new System.Drawing.Point(70, 161);
+            this.newver.Name = "newver";
+            this.newver.Size = new System.Drawing.Size(311, 21);
+            this.newver.TabIndex = 8;
+            this.newver.Text = "Bản cập nhật mới nhất cho Windows 11";
+            this.newver.Visible = false;
             // 
-            // label7
+            // updatestat
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label7.Location = new System.Drawing.Point(70, 304);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(232, 21);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "Bạn đang dùng bản mới nhất";
-            this.label7.Visible = false;
+            this.updatestat.AutoSize = true;
+            this.updatestat.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updatestat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.updatestat.Location = new System.Drawing.Point(70, 304);
+            this.updatestat.Name = "updatestat";
+            this.updatestat.Size = new System.Drawing.Size(232, 21);
+            this.updatestat.TabIndex = 11;
+            this.updatestat.Text = "Bạn đang dùng bản mới nhất";
+            this.updatestat.Visible = false;
             // 
-            // label6
+            // newver_build
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label6.Location = new System.Drawing.Point(70, 196);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(43, 20);
-            this.label6.TabIndex = 17;
-            this.label6.Text = "Build";
-            this.label6.Visible = false;
+            this.newver_build.AutoSize = true;
+            this.newver_build.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newver_build.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.newver_build.Location = new System.Drawing.Point(70, 196);
+            this.newver_build.Name = "newver_build";
+            this.newver_build.Size = new System.Drawing.Size(43, 20);
+            this.newver_build.TabIndex = 17;
+            this.newver_build.Text = "Build";
+            this.newver_build.Visible = false;
             // 
-            // pictureBox2
+            // logo
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(404, 217);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(163, 157);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 18;
-            this.pictureBox2.TabStop = false;
+            this.logo.Image = ((System.Drawing.Image)(resources.GetObject("logo.Image")));
+            this.logo.Location = new System.Drawing.Point(404, 217);
+            this.logo.Name = "logo";
+            this.logo.Size = new System.Drawing.Size(163, 157);
+            this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.logo.TabIndex = 18;
+            this.logo.TabStop = false;
             // 
-            // label8
+            // beginlabel
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label8.Location = new System.Drawing.Point(69, 64);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(459, 25);
-            this.label8.TabIndex = 19;
-            this.label8.Text = "Cập nhật Windows 11 cho máy không được hỗ trợ";
+            this.beginlabel.AutoSize = true;
+            this.beginlabel.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.beginlabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.beginlabel.Location = new System.Drawing.Point(69, 64);
+            this.beginlabel.Name = "beginlabel";
+            this.beginlabel.Size = new System.Drawing.Size(459, 25);
+            this.beginlabel.TabIndex = 19;
+            this.beginlabel.Text = "Cập nhật Windows 11 cho máy không được hỗ trợ";
             // 
-            // label9
+            // beginsublabel
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label9.Location = new System.Drawing.Point(71, 103);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(452, 34);
-            this.label9.TabIndex = 20;
-            this.label9.Text = "Tải và cài đặt các bản cập nhật tích lũy cho Windows 11 thông qua file .msu \r\ntừ " +
+            this.beginsublabel.AutoSize = true;
+            this.beginsublabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.beginsublabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.beginsublabel.Location = new System.Drawing.Point(71, 103);
+            this.beginsublabel.Name = "beginsublabel";
+            this.beginsublabel.Size = new System.Drawing.Size(452, 34);
+            this.beginsublabel.TabIndex = 20;
+            this.beginsublabel.Text = "Tải và cài đặt các bản cập nhật tích lũy cho Windows 11 thông qua file .msu \r\ntừ " +
     "Microsoft Update Catalog";
             // 
-            // button1
+            // checkupbutton
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.button1.Location = new System.Drawing.Point(74, 282);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(240, 42);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "Kiểm tra cập nhật";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.checkupbutton.BackColor = System.Drawing.Color.Transparent;
+            this.checkupbutton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("checkupbutton.BackgroundImage")));
+            this.checkupbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.checkupbutton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.checkupbutton.FlatAppearance.BorderSize = 0;
+            this.checkupbutton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.checkupbutton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.checkupbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkupbutton.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkupbutton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.checkupbutton.Location = new System.Drawing.Point(74, 282);
+            this.checkupbutton.Name = "checkupbutton";
+            this.checkupbutton.Size = new System.Drawing.Size(240, 42);
+            this.checkupbutton.TabIndex = 21;
+            this.checkupbutton.Text = "Kiểm tra cập nhật";
+            this.checkupbutton.UseVisualStyleBackColor = false;
+            this.checkupbutton.Click += new System.EventHandler(this.checkupbutton_Click);
             // 
-            // label10
+            // footlabel
             // 
-            this.label10.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label10.Location = new System.Drawing.Point(0, 361);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(634, 80);
-            this.label10.TabIndex = 22;
-            this.label10.Text = "\"Không ai có quyền ép người khác phải tuân theo thứ mà mình cho là đúng\"";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.footlabel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.footlabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.footlabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.footlabel.Location = new System.Drawing.Point(0, 361);
+            this.footlabel.Name = "footlabel";
+            this.footlabel.Size = new System.Drawing.Size(634, 80);
+            this.footlabel.TabIndex = 22;
+            this.footlabel.Text = "\"Không ai có quyền ép người khác phải tuân theo thứ mà mình cho là đúng\"";
+            this.footlabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox3
+            // loadingbar1
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(73, 243);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(241, 10);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 23;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Visible = false;
+            this.loadingbar1.Image = ((System.Drawing.Image)(resources.GetObject("loadingbar1.Image")));
+            this.loadingbar1.Location = new System.Drawing.Point(73, 243);
+            this.loadingbar1.Name = "loadingbar1";
+            this.loadingbar1.Size = new System.Drawing.Size(241, 10);
+            this.loadingbar1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.loadingbar1.TabIndex = 23;
+            this.loadingbar1.TabStop = false;
+            this.loadingbar1.Visible = false;
             // 
-            // backgroundWorker1
+            // parseHTML
             // 
-            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
-            this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
+            this.parseHTML.DoWork += new System.ComponentModel.DoWorkEventHandler(this.parseHTML_DoWork);
+            this.parseHTML.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.parseHTML_RunWorkerCompleted);
             // 
-            // labelk
+            // newver_kb
             // 
-            this.labelk.AutoSize = true;
-            this.labelk.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelk.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.labelk.Location = new System.Drawing.Point(70, 222);
-            this.labelk.Name = "labelk";
-            this.labelk.Size = new System.Drawing.Size(27, 20);
-            this.labelk.TabIndex = 25;
-            this.labelk.Text = "KB";
-            this.labelk.Visible = false;
+            this.newver_kb.AutoSize = true;
+            this.newver_kb.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newver_kb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.newver_kb.Location = new System.Drawing.Point(70, 222);
+            this.newver_kb.Name = "newver_kb";
+            this.newver_kb.Size = new System.Drawing.Size(27, 20);
+            this.newver_kb.TabIndex = 25;
+            this.newver_kb.Text = "KB";
+            this.newver_kb.Visible = false;
             // 
-            // buttonu
+            // downbutton
             // 
-            this.buttonu.BackColor = System.Drawing.Color.Transparent;
-            this.buttonu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonu.BackgroundImage")));
-            this.buttonu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.buttonu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonu.FlatAppearance.BorderSize = 0;
-            this.buttonu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.buttonu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.buttonu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonu.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.buttonu.Location = new System.Drawing.Point(73, 282);
-            this.buttonu.Name = "buttonu";
-            this.buttonu.Size = new System.Drawing.Size(240, 42);
-            this.buttonu.TabIndex = 26;
-            this.buttonu.Text = "Tải bản cập nhật";
-            this.buttonu.UseVisualStyleBackColor = false;
-            this.buttonu.Visible = false;
-            this.buttonu.Click += new System.EventHandler(this.buttonu_Click);
+            this.downbutton.BackColor = System.Drawing.Color.Transparent;
+            this.downbutton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("downbutton.BackgroundImage")));
+            this.downbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.downbutton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.downbutton.FlatAppearance.BorderSize = 0;
+            this.downbutton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.downbutton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.downbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.downbutton.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.downbutton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.downbutton.Location = new System.Drawing.Point(73, 282);
+            this.downbutton.Name = "downbutton";
+            this.downbutton.Size = new System.Drawing.Size(240, 42);
+            this.downbutton.TabIndex = 26;
+            this.downbutton.Text = "Tải bản cập nhật";
+            this.downbutton.UseVisualStyleBackColor = false;
+            this.downbutton.Visible = false;
+            this.downbutton.Click += new System.EventHandler(this.downbutton_Click);
             // 
-            // buttonshell
+            // shellbuttonkb
             // 
-            this.buttonshell.BackColor = System.Drawing.Color.Transparent;
-            this.buttonshell.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonshell.BackgroundImage")));
-            this.buttonshell.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.buttonshell.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonshell.FlatAppearance.BorderSize = 0;
-            this.buttonshell.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.buttonshell.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.buttonshell.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonshell.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonshell.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.buttonshell.Location = new System.Drawing.Point(197, 282);
-            this.buttonshell.Name = "buttonshell";
-            this.buttonshell.Size = new System.Drawing.Size(240, 42);
-            this.buttonshell.TabIndex = 28;
-            this.buttonshell.Text = "Xác nhận tải xuống";
-            this.buttonshell.UseVisualStyleBackColor = false;
-            this.buttonshell.Visible = false;
-            this.buttonshell.Click += new System.EventHandler(this.buttonshell_Click);
+            this.shellbuttonkb.BackColor = System.Drawing.Color.Transparent;
+            this.shellbuttonkb.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("shellbuttonkb.BackgroundImage")));
+            this.shellbuttonkb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.shellbuttonkb.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.shellbuttonkb.FlatAppearance.BorderSize = 0;
+            this.shellbuttonkb.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.shellbuttonkb.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.shellbuttonkb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.shellbuttonkb.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.shellbuttonkb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.shellbuttonkb.Location = new System.Drawing.Point(197, 282);
+            this.shellbuttonkb.Name = "shellbuttonkb";
+            this.shellbuttonkb.Size = new System.Drawing.Size(240, 42);
+            this.shellbuttonkb.TabIndex = 28;
+            this.shellbuttonkb.Text = "Xác nhận tải xuống";
+            this.shellbuttonkb.UseVisualStyleBackColor = false;
+            this.shellbuttonkb.Visible = false;
+            this.shellbuttonkb.Click += new System.EventHandler(this.shellbuttonkb_Click);
             // 
-            // backgroundWorker2
+            // shellKBrunner
             // 
-            this.backgroundWorker2.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker2_DoWork);
-            this.backgroundWorker2.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker2_RunWorkerCompleted_1);
+            this.shellKBrunner.DoWork += new System.ComponentModel.DoWorkEventHandler(this.shellKBrunner_DoWork);
+            this.shellKBrunner.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.shellKBrunner_RunWorkerCompleted);
             // 
-            // pictureBoxshell
+            // loadingbar2
             // 
-            this.pictureBoxshell.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxshell.Image")));
-            this.pictureBoxshell.Location = new System.Drawing.Point(196, 298);
-            this.pictureBoxshell.Name = "pictureBoxshell";
-            this.pictureBoxshell.Size = new System.Drawing.Size(241, 10);
-            this.pictureBoxshell.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxshell.TabIndex = 29;
-            this.pictureBoxshell.TabStop = false;
-            this.pictureBoxshell.Visible = false;
+            this.loadingbar2.Image = ((System.Drawing.Image)(resources.GetObject("loadingbar2.Image")));
+            this.loadingbar2.Location = new System.Drawing.Point(196, 298);
+            this.loadingbar2.Name = "loadingbar2";
+            this.loadingbar2.Size = new System.Drawing.Size(241, 10);
+            this.loadingbar2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.loadingbar2.TabIndex = 29;
+            this.loadingbar2.TabStop = false;
+            this.loadingbar2.Visible = false;
             // 
-            // buttonshell2
+            // wusabutton
             // 
-            this.buttonshell2.BackColor = System.Drawing.Color.Transparent;
-            this.buttonshell2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonshell2.BackgroundImage")));
-            this.buttonshell2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.buttonshell2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonshell2.FlatAppearance.BorderSize = 0;
-            this.buttonshell2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.buttonshell2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.buttonshell2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonshell2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonshell2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.buttonshell2.Location = new System.Drawing.Point(196, 282);
-            this.buttonshell2.Name = "buttonshell2";
-            this.buttonshell2.Size = new System.Drawing.Size(240, 42);
-            this.buttonshell2.TabIndex = 30;
-            this.buttonshell2.Text = "Cài đặt cập nhật";
-            this.buttonshell2.UseVisualStyleBackColor = false;
-            this.buttonshell2.Visible = false;
-            this.buttonshell2.Click += new System.EventHandler(this.buttonshell2_Click);
+            this.wusabutton.BackColor = System.Drawing.Color.Transparent;
+            this.wusabutton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("wusabutton.BackgroundImage")));
+            this.wusabutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.wusabutton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.wusabutton.FlatAppearance.BorderSize = 0;
+            this.wusabutton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.wusabutton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.wusabutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.wusabutton.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.wusabutton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.wusabutton.Location = new System.Drawing.Point(196, 282);
+            this.wusabutton.Name = "wusabutton";
+            this.wusabutton.Size = new System.Drawing.Size(240, 42);
+            this.wusabutton.TabIndex = 30;
+            this.wusabutton.Text = "Cài đặt cập nhật";
+            this.wusabutton.UseVisualStyleBackColor = false;
+            this.wusabutton.Visible = false;
+            this.wusabutton.Click += new System.EventHandler(this.wusabutton_Click);
             // 
-            // textBox1
+            // powershelloutput
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.textBox1.Location = new System.Drawing.Point(72, 66);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(495, 213);
-            this.textBox1.TabIndex = 31;
-            this.textBox1.Visible = false;
+            this.powershelloutput.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.powershelloutput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.powershelloutput.Location = new System.Drawing.Point(72, 66);
+            this.powershelloutput.Name = "powershelloutput";
+            this.powershelloutput.Size = new System.Drawing.Size(495, 213);
+            this.powershelloutput.TabIndex = 31;
+            this.powershelloutput.Visible = false;
             // 
-            // backgroundWorker3
+            // wusacallshell
             // 
-            this.backgroundWorker3.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker3_DoWork);
-            this.backgroundWorker3.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker3_RunWorkerCompleted);
+            this.wusacallshell.DoWork += new System.ComponentModel.DoWorkEventHandler(this.wusacallshell_DoWork);
+            this.wusacallshell.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.wusacallshell_RunWorkerCompleted);
+            // 
+            // errorlabel
+            // 
+            this.errorlabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.errorlabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.errorlabel.Location = new System.Drawing.Point(74, 198);
+            this.errorlabel.Name = "errorlabel";
+            this.errorlabel.Size = new System.Drawing.Size(493, 21);
+            this.errorlabel.TabIndex = 32;
+            this.errorlabel.Text = "Đã có lỗi xảy ra";
+            this.errorlabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.errorlabel.Visible = false;
+            // 
+            // errordetail
+            // 
+            this.errordetail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.errordetail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.errordetail.Location = new System.Drawing.Point(74, 226);
+            this.errordetail.Name = "errordetail";
+            this.errordetail.Size = new System.Drawing.Size(493, 53);
+            this.errordetail.TabIndex = 33;
+            this.errordetail.Text = "Bạn đang dùng bản mới nhất";
+            this.errordetail.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.errordetail.Visible = false;
             // 
             // win11_downloadSelection
             // 
@@ -308,23 +334,25 @@ namespace Windows11Upgrade
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(634, 441);
-            this.Controls.Add(this.pictureBoxshell);
-            this.Controls.Add(this.labelk);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.buttonu);
-            this.Controls.Add(this.buttonshell);
-            this.Controls.Add(this.buttonshell2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.errordetail);
+            this.Controls.Add(this.errorlabel);
+            this.Controls.Add(this.loadingbar2);
+            this.Controls.Add(this.newver_kb);
+            this.Controls.Add(this.logo);
+            this.Controls.Add(this.newver_build);
+            this.Controls.Add(this.updatestat);
+            this.Controls.Add(this.curver_build);
+            this.Controls.Add(this.curver);
+            this.Controls.Add(this.loadingbar1);
+            this.Controls.Add(this.newver);
+            this.Controls.Add(this.beginlabel);
+            this.Controls.Add(this.footlabel);
+            this.Controls.Add(this.beginsublabel);
+            this.Controls.Add(this.powershelloutput);
+            this.Controls.Add(this.downbutton);
+            this.Controls.Add(this.checkupbutton);
+            this.Controls.Add(this.shellbuttonkb);
+            this.Controls.Add(this.wusabutton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -333,9 +361,9 @@ namespace Windows11Upgrade
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Windows 11 Unsupported Upgrade";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.exit);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxshell)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loadingbar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loadingbar2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -343,25 +371,27 @@ namespace Windows11Upgrade
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.Label labelk;
-        private System.Windows.Forms.Button buttonu;
-        private System.Windows.Forms.Button buttonshell;
-        private System.ComponentModel.BackgroundWorker backgroundWorker2;
-        private System.Windows.Forms.PictureBox pictureBoxshell;
-        private System.Windows.Forms.Button buttonshell2;
-        private System.Windows.Forms.Label textBox1;
-        private System.ComponentModel.BackgroundWorker backgroundWorker3;
+        private System.Windows.Forms.Label curver;
+        private System.Windows.Forms.Label curver_build;
+        private System.Windows.Forms.Label newver;
+        private System.Windows.Forms.Label updatestat;
+        private System.Windows.Forms.Label newver_build;
+        private System.Windows.Forms.PictureBox logo;
+        private System.Windows.Forms.Label beginlabel;
+        private System.Windows.Forms.Label beginsublabel;
+        private System.Windows.Forms.Button checkupbutton;
+        private System.Windows.Forms.Label footlabel;
+        private System.Windows.Forms.PictureBox loadingbar1;
+        private System.ComponentModel.BackgroundWorker parseHTML;
+        private System.Windows.Forms.Label newver_kb;
+        private System.Windows.Forms.Button downbutton;
+        private System.Windows.Forms.Button shellbuttonkb;
+        private System.ComponentModel.BackgroundWorker shellKBrunner;
+        private System.Windows.Forms.PictureBox loadingbar2;
+        private System.Windows.Forms.Button wusabutton;
+        private System.Windows.Forms.Label powershelloutput;
+        private System.ComponentModel.BackgroundWorker wusacallshell;
+        private System.Windows.Forms.Label errorlabel;
+        private System.Windows.Forms.Label errordetail;
     }
 }

@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="logo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAPAAAADwCAYAAAA+VemSAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAu
         IwAALiMBeKU/dgAAIFNJREFUeF7t3Xe8FcXZB/Cxa0TsHTsWNBosEY1i7GisAYOKYu+9l1cjMYhdMdag
@@ -262,7 +262,7 @@
         DjSolIpBwfw/JRCyWrhQFMMAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="button1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="checkupbutton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAqMAAAB4CAYAAADG+futAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         EwAACxMBAJqcGAAABTVJREFUeF7t3c1ulAUUx+FuaEJClAUbFn6EcAEscGXvwygx3EXxIjRRXEtjYOdO
@@ -290,7 +290,7 @@
         LwUAwNsluy37LTsue+6rkH2XnVf135Ierf0H/ddphUdjsUkAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="pictureBox3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="loadingbar1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         R0lGODlh3AAKANUAAAQCRIyKtMTG3OTm/ERGfCwqZNTW/KyqzBQWVPT2/MzO5GxunLy61Nze7Ozu/Fxe
         lDw+dBweXLy+/AwKTJyevMTG/ExOhBwaVPz+/MzO/OTi/AQGROzq/ExKhDQybNza/LS21Pz6/Hx+rLy+
@@ -438,10 +438,10 @@
         QmvAERCAdBKVNBgOAbwngg8EeHVFCyaOEECK7GFhQIsRJHHSLLCZUQAQP2VRSwgAOw==
 </value>
   </data>
-  <metadata name="backgroundWorker1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="parseHTML.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <data name="buttonu.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="downbutton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAqMAAAB4CAYAAADG+futAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         EwAACxMBAJqcGAAABTVJREFUeF7t3c1ulAUUx+FuaEJClAUbFn6EcAEscGXvwygx3EXxIjRRXEtjYOdO
@@ -469,7 +469,7 @@
         LwUAwNsluy37LTsue+6rkH2XnVf135Ierf0H/ddphUdjsUkAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="buttonshell.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="shellbuttonkb.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAqMAAAB4CAYAAADG+futAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         EwAACxMBAJqcGAAABTVJREFUeF7t3c1ulAUUx+FuaEJClAUbFn6EcAEscGXvwygx3EXxIjRRXEtjYOdO
@@ -497,10 +497,10 @@
         LwUAwNsluy37LTsue+6rkH2XnVf135Ierf0H/ddphUdjsUkAAAAASUVORK5CYII=
 </value>
   </data>
-  <metadata name="backgroundWorker2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="shellKBrunner.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>181, 17</value>
   </metadata>
-  <data name="pictureBoxshell.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="loadingbar2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         R0lGODlh3AAKANUAAAQCRIyKtMTG3OTm/ERGfCwqZNTW/KyqzBQWVPT2/MzO5GxunLy61Nze7Ozu/Fxe
         lDw+dBweXLy+/AwKTJyevMTG/ExOhBwaVPz+/MzO/OTi/AQGROzq/ExKhDQybNza/LS21Pz6/Hx+rLy+
@@ -648,7 +648,7 @@
         QmvAERCAdBKVNBgOAbwngg8EeHVFCyaOEECK7GFhQIsRJHHSLLCZUQAQP2VRSwgAOw==
 </value>
   </data>
-  <data name="buttonshell2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="wusabutton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAqMAAAB4CAYAAADG+futAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         EwAACxMBAJqcGAAABTVJREFUeF7t3c1ulAUUx+FuaEJClAUbFn6EcAEscGXvwygx3EXxIjRRXEtjYOdO
@@ -676,7 +676,7 @@
         LwUAwNsluy37LTsue+6rkH2XnVf135Ierf0H/ddphUdjsUkAAAAASUVORK5CYII=
 </value>
   </data>
-  <metadata name="backgroundWorker3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="wusacallshell.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>345, 17</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

@@ -8,179 +8,157 @@ using System.Net.Http;
 using System.Management.Automation;
 using System.Text.RegularExpressions;
 
-namespace Windows11Upgrade {
-    public partial class win11_downloadSelection : Form {
+namespace Windows11Upgrade
+{
+    public partial class win11_downloadSelection : Form
+    {
 
-        public win11_downloadSelection() 
+        public win11_downloadSelection()
         {
             InitializeComponent();
         }
 
-        public string slabel3, slabel6, slabel7, slabelk, textboxi, downloadedfile;
+        public string scurver_build, snewver_build, supdatestat, snewver_kb, spsoutput, downloadedfile;
         public int ava = 0, nextclick = 0;
 
 
         // ===========================================================================================================================================
+        // ===========================================================================================================================================
+        // BackgroundWorker1
         // Check Current Version and New Version
-        // Show Language option if there is newer version available
-        private void backgroundWorker1_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
+        private void parseHTML_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
         {
-            // Load Current Version
-            string builver = Registry.GetValue(@"HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion", "CurrentBuild", "").ToString();
-            string builver2 = Registry.GetValue(@"HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion", "UBR", "").ToString();
-
-            slabel3 = "Build " + builver + "." + builver2;
-
-
-            // Load Newest Windows 11 Version
-            ServicePointManager.Expect100Continue = true;
-            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
-
-            string HTML;
-            HttpClient client = new HttpClient();
-            using (HttpResponseMessage response = client.GetAsync("https://docs.microsoft.com/en-us/windows/release-health/windows11-release-information").Result)
+            try
             {
-                using (HttpContent content = response.Content)
-                    HTML = content.ReadAsStringAsync().Result;
+                // Load Current Version
+                string builver = Registry.GetValue(@"HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion", "CurrentBuild", "").ToString();
+                string builver2 = Registry.GetValue(@"HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion", "UBR", "").ToString();
+
+                scurver_build = "Build " + builver + "." + builver2;
+
+                // Load Newest Windows 11 Version
+                ServicePointManager.Expect100Continue = true;
+                ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+
+                string HTML;
+                HttpClient client = new HttpClient();
+                using (HttpResponseMessage response = client.GetAsync("https://docs.microsoft.com/en-us/windows/release-health/windows11-release-information").Result)
+                {
+                    using (HttpContent content = response.Content)
+                        HTML = content.ReadAsStringAsync().Result;
+                }
+                var doc = new HtmlAgilityPack.HtmlDocument();
+                doc.LoadHtml(HTML);
+
+                HtmlNode htmlNode = doc.DocumentNode.SelectSingleNode("//tr[@class='highlight']");
+                string wver11 = htmlNode.InnerText;
+                int nhh = wver11.IndexOf('.');
+                wver11 = wver11.Substring((nhh - 5), 9);
+                snewver_build = "Build " + wver11;
+
+                // KB Check
+                HtmlNode htmlNode2 = doc.DocumentNode.SelectSingleNode("//table[@id='historyTable_0']");
+                htmlNode2 = htmlNode2.SelectSingleNode("(.//tr)[2]");
+                string kba = htmlNode2.InnerText;
+                int nhhk = kba.IndexOf('K');
+                kba = kba.Substring(nhhk, 9);
+                snewver_kb = kba;
+
+                // Check Update Available
+                int curmaj = Int32.Parse(builver);
+                int curmin = Int32.Parse(builver2);
+                string wver11ma = wver11.Substring(0, 5);
+                string wver11mi = wver11.Substring(6, 3);
+                int w11maj = Int32.Parse(wver11ma);
+                int w11min = Int32.Parse(wver11mi);
+                // Currently in Windows 10 or older Windows
+                if (curmaj < 22000)
+                {
+                    ava = 0;
+                    supdatestat = "Chỉ dùng cho Windows 11";
+                }
+                // Currently in older Major (ie. 22000 vs 22001) or Same Major and older Minor (ie. 22000.0 vs 22000.1)
+                else if ((curmaj < w11maj) || ((curmaj == w11maj) && (curmin < w11min)))
+                    ava = 1;
+                else
+                {
+                    ava = 0;
+                    supdatestat = "Không có bản cập nhật mới";
+                }
             }
-
-            var doc = new HtmlAgilityPack.HtmlDocument();
-            doc.LoadHtml(HTML);
-
-            HtmlNode htmlNode = doc.DocumentNode.SelectSingleNode("//tr[@class='highlight']");
-
-            string wver11 = htmlNode.InnerText;
-            int nhh = wver11.IndexOf('.');
-            wver11 = wver11.Substring((nhh - 5), 9);
-            slabel6 = "Build " + wver11;
-
-
-            // KB Check
-            HtmlNode htmlNode2 = doc.DocumentNode.SelectSingleNode("//table[@id='historyTable_0']");
-            htmlNode2 = htmlNode2.SelectSingleNode("(.//tr)[2]");
-            string kba = htmlNode2.InnerText;
-            int nhhk = kba.IndexOf('K');
-            kba = kba.Substring(nhhk, 9);
-            slabelk = kba;
-
-
-            // Check Update Available
-            int curmaj = Int32.Parse(builver);
-            int curmin = Int32.Parse(builver2);
-            string wver11ma = wver11.Substring(0, 5);
-            string wver11mi = wver11.Substring(6, 3);
-            int w11maj = Int32.Parse(wver11ma);
-            int w11min = Int32.Parse(wver11mi);
-            // Currently in Windows 10 or older Windows
-            if (curmaj < 22000)
+            catch (Exception ex)
             {
-                ava = 0;
-                slabel7 = "Chỉ dùng cho Windows 11";
+                DialogResult dialog = MessageBox.Show(ex.ToString(), "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (dialog == DialogResult.OK)
+                    Environment.Exit(0);
             }
-            // Currently in older Major (ie. 22000 vs 22001) or Same Major and older Minor (ie. 22000.0 vs 22000.1)
-            else if ((curmaj < w11maj) || ((curmaj == w11maj) && (curmin < w11min)))
-                ava = 1;
-            else
-            {
-                ava = 0;
-                slabel7 = "Không có bản cập nhật mới";
-            }  
         }
-        private void backgroundWorker1_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
+        private void parseHTML_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
         {
             labelcheck();
         }
         private void labelcheck()
         {
-            label8.Visible = false;
-            label9.Visible = false;
-            pictureBox3.Visible = false;
-            button1.Visible = false;
+            beginlabel.Visible = false;
+            beginsublabel.Visible = false;
+            loadingbar1.Visible = false;
+            checkupbutton.Visible = false;
 
-            label3.Text = slabel3;
-            label6.Text = slabel6;
-            label7.Text = slabel7;
-            labelk.Text = slabelk;
+            curver_build.Text = scurver_build;
+            newver_build.Text = snewver_build;
+            updatestat.Text = supdatestat;
+            newver_kb.Text = snewver_kb;
 
-            label1.Visible = true;
-            label3.Visible = true;
-            label4.Visible = true;
-            label6.Visible = true;
-            labelk.Visible = true;
+            curver.Visible = true;
+            curver_build.Visible = true;
+            newver.Visible = true;
+            newver_build.Visible = true;
+            newver_kb.Visible = true;
 
-            
             if (ava == 1)
-                buttonu.Visible = true;
+                downbutton.Visible = true;
             else
-                label7.Visible = true;
+                updatestat.Visible = true;
         }
-
 
         // ===========================================================================================================================================
         // Kiem tra cap nhat clicked
-        private void button1_Click(object sender, EventArgs e)
+        private void checkupbutton_Click(object sender, EventArgs e)
         {
-            button1.Text = "Vui lòng chờ";
-            button1.Enabled = false;
-            pictureBox3.Visible = true;
+            checkupbutton.Text = "Vui lòng chờ";
+            checkupbutton.Enabled = false;
+            loadingbar1.Visible = true;
 
-            backgroundWorker1.RunWorkerAsync();
+            parseHTML.RunWorkerAsync();
         }
 
 
         // ===========================================================================================================================================
-        // Tai ban cap nhat clicked (Kiem tra cap nhat)
-        private void buttonu_Click(object sender, EventArgs e)
-        {
-            textboxi = "";
-            nextclick += 1;
-
-            string checkforkb = "Get-KbUpdate -Name " + slabelk + " -Architecture x64 -Simple";
-            backgroundWorker2.RunWorkerAsync(argument: checkforkb);
-
-            label1.Visible = false;
-            label3.Visible = false;
-            label4.Visible = false;
-            label6.Visible = false;
-            labelk.Visible = false;
-            pictureBox2.Visible = false;
-            buttonu.Visible = false;
-
-            textBox1.Visible = true;
-            pictureBoxshell.Visible = true;
-        }
-
-
         // ===========================================================================================================================================
-        // Confirm Download (Xac nhan tai xuong clicked)
-        private void buttonshell_Click(object sender, EventArgs e)
+        // BackgroundWorker2
+        // Run potatoqualitee Powershell script for kbupdate
+        private void shellKBrunner_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
         {
-            textboxi = "";
-            nextclick += 1;
-        
-            string sdownload = "Save-KbUpdate -Name " + slabelk + " -Architecture x64";
-            backgroundWorker2.RunWorkerAsync(argument: sdownload);
+            try
+            {
+                string kbv = (string)e.Argument;
+                PowerShell psinstance = PowerShell.Create();
+                psinstance.AddScript(kbv);
+                var results = psinstance.Invoke();
 
-            buttonshell.Visible = false;
-            pictureBoxshell.Visible = true;
+                foreach (PSObject psObject in results)
+                    spsoutput += psObject.ToString();
+
+                psinstance.Stop();
+            }
+            catch (Exception ex)
+            {
+                DialogResult dialog = MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (dialog == DialogResult.OK)
+                    Environment.Exit(0);
+            }
         }
-
-
-        // ===========================================================================================================================================
-        // Powershell Runner
-        private void backgroundWorker2_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
-        {
-            string kbv = (string)e.Argument;
-            PowerShell psinstance = PowerShell.Create();
-            psinstance.AddScript(kbv);
-            var results = psinstance.Invoke();
-
-            foreach (PSObject psObject in results)
-                textboxi += psObject.ToString();
-
-            psinstance.Stop();
-        }
-        private void backgroundWorker2_RunWorkerCompleted_1(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
+        private void shellKBrunner_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
         {
             showtextbox();
         }
@@ -188,69 +166,116 @@ namespace Windows11Upgrade {
         {
             if (nextclick == 1)
             {
-                int nhh = textboxi.IndexOf(":");
-                int nhh2 = textboxi.IndexOf("Size");
-                string name = textboxi.Substring((nhh + 2), (nhh2 - nhh - 3));
+                int nhh = spsoutput.IndexOf(":");
+                int nhh2 = spsoutput.IndexOf("Size");
+                string name = spsoutput.Substring((nhh + 2), (nhh2 - nhh - 3));
                 nhh2 = nhh2 + 8;
-                string name2 = textboxi.Substring(nhh2);
-                textBox1.Text = name + "\n \n" + name2;
+                string name2 = spsoutput.Substring(nhh2);
+                powershelloutput.Text = name + "\n \n" + name2;
 
-                buttonshell.Visible = true;
+                shellbuttonkb.Visible = true;
             }
             else if (nextclick == 2)
             {
-                int nhh = textboxi.IndexOf(":");
-                int nhh2 = textboxi.IndexOf("Size (MB)");
-                int nhh3 = textboxi.IndexOf("FullName");
-                string name = textboxi.Substring((nhh + 2), (nhh2 - nhh - 3));
-                string name2 = textboxi.Substring((nhh2 + 12), (nhh3 - nhh2 - 14));
-                string name3 = textboxi.Substring((nhh3 + 12));
+                int nhh = spsoutput.IndexOf(":");
+                int nhh2 = spsoutput.IndexOf("Size (MB)");
+                int nhh3 = spsoutput.IndexOf("FullName");
+                string name = spsoutput.Substring((nhh + 2), (nhh2 - nhh - 3));
+                string name2 = spsoutput.Substring((nhh2 + 12), (nhh3 - nhh2 - 14));
+                string name3 = spsoutput.Substring((nhh3 + 12));
                 name3 = Regex.Replace(name3, " {2,}", "");
                 name3 = Regex.Replace(name3, @"\t|\n|\r", "");
-                textBox1.Text = name + "\n \n" + name2 + " MB \n \n" + name3;
+                powershelloutput.Text = name + "\n \n" + name2 + " MB \n \n" + name3;
 
                 // Get file name for wusa.exe
                 downloadedfile = name3;
 
-                buttonshell2.Visible = true;
+                wusabutton.Visible = true;
 
             }
-            pictureBoxshell.Visible = false;
+            loadingbar2.Visible = false;
         }
 
+        // ===========================================================================================================================================
+        // Tai ban cap nhat clicked (Kiem tra cap nhat)
+        private void downbutton_Click(object sender, EventArgs e)
+        {
+            spsoutput = "";
+            nextclick += 1;
+
+            string checkforkb = "Get-KbUpdate -Name " + snewver_kb + " -Architecture x64 -Simple";
+            shellKBrunner.RunWorkerAsync(argument: checkforkb);
+
+            curver.Visible = false;
+            curver_build.Visible = false;
+            newver.Visible = false;
+            newver_build.Visible = false;
+            newver_kb.Visible = false;
+            logo.Visible = false;
+            downbutton.Visible = false;
+
+            powershelloutput.Visible = true;
+            loadingbar2.Visible = true;
+        }
+
+
+        // ===========================================================================================================================================
+        // Confirm Download (Xac nhan tai xuong clicked)
+        private void shellbuttonkb_Click(object sender, EventArgs e)
+        {
+            spsoutput = "";
+            nextclick += 1;
+
+            string sdownload = "Save-KbUpdate -Name " + snewver_kb + " -Architecture x64";
+            shellKBrunner.RunWorkerAsync(argument: sdownload);
+
+            shellbuttonkb.Visible = false;
+            loadingbar2.Visible = true;
+        }
+
+
+        // ===========================================================================================================================================
+        // ===========================================================================================================================================
+        // wusa.exe Update Runner
+        // Run Powershell script to call wusa.exe with downloaded update
+        private void wusacallshell_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
+        {
+            try
+            {
+                string kbv = (string)e.Argument;
+                PowerShell psinstance = PowerShell.Create();
+                psinstance.AddScript(kbv);
+                psinstance.Invoke();
+                psinstance.Stop();
+            }
+            catch (Exception ex)
+            {
+                DialogResult dialog = MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (dialog == DialogResult.OK)
+                    Environment.Exit(0);
+            }   
+        }
+        private void wusacallshell_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
+        {
+        }
 
         // ===========================================================================================================================================
         // Install Clicked
-        private void buttonshell2_Click(object sender, EventArgs e)
+        private void wusabutton_Click(object sender, EventArgs e)
         {
-            textboxi = "";
-
             string sinstall = "wusa.exe " + downloadedfile;
-            backgroundWorker3.RunWorkerAsync(argument: sinstall);
+            wusacallshell.RunWorkerAsync(argument: sinstall);
+
+            wusabutton.Visible = false;
+            loadingbar2.Visible = true;
+            powershelloutput.Text = "Vui lòng chờ quá trình cài đặt hoàn tất. Máy có thể sẽ khởi động lại.";
         }
 
 
         // ===========================================================================================================================================
-        // wusa.exe Update Runner
-        private void backgroundWorker3_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
-        {
-            string kbv = (string)e.Argument;
-            PowerShell psinstance = PowerShell.Create();
-            psinstance.AddScript(kbv);
-            psinstance.Invoke();
-            psinstance.Stop();
-        }
-        private void backgroundWorker3_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
-        {
-            buttonshell2.Visible = false;
-            pictureBoxshell.Visible = true;
-            textboxi = "Vui lòng chờ quá trình cài đặt hoàn tất. Máy có thể sẽ khởi động lại.";
-        }
-
-
         // ===========================================================================================================================================
         // Exit
-        private void exit(object sender, FormClosingEventArgs e) 
+        private void exit(object sender, FormClosingEventArgs e)
         {
             Environment.Exit(0);
         }
