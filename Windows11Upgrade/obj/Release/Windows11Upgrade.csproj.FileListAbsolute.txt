@@ -1,0 +1,33 @@
+C:\Users\Gia Hai Tran\Desktop\Windows11Upgrade-main\Windows11Upgrade-main\Windows11Upgrade\bin\Release\Windows11UnsupportedUpgrade.exe.config
+C:\Users\Gia Hai Tran\Desktop\Windows11Upgrade-main\Windows11Upgrade-main\Windows11Upgrade\bin\Release\Windows11UnsupportedUpgrade.exe
+C:\Users\Gia Hai Tran\Desktop\Windows11Upgrade-main\Windows11Upgrade-main\Windows11Upgrade\bin\Release\Windows11UnsupportedUpgrade.pdb
+C:\Users\Gia Hai Tran\Desktop\Windows11Upgrade-main\Windows11Upgrade-main\Windows11Upgrade\bin\Release\HtmlAgilityPack.dll
+C:\Users\Gia Hai Tran\Desktop\Windows11Upgrade-main\Windows11Upgrade-main\Windows11Upgrade\bin\Release\Newtonsoft.Json.dll
+C:\Users\Gia Hai Tran\Desktop\Windows11Upgrade-main\Windows11Upgrade-main\Windows11Upgrade\bin\Release\HtmlAgilityPack.pdb
+C:\Users\Gia Hai Tran\Desktop\Windows11Upgrade-main\Windows11Upgrade-main\Windows11Upgrade\bin\Release\HtmlAgilityPack.xml
+C:\Users\Gia Hai Tran\Desktop\Windows11Upgrade-main\Windows11Upgrade-main\Windows11Upgrade\bin\Release\Newtonsoft.Json.xml
+C:\Users\Gia Hai Tran\Desktop\Windows11Upgrade-main\Windows11Upgrade-main\Windows11Upgrade\obj\Release\Windows11Upgrade.win11_downloadSelection.resources
+C:\Users\Gia Hai Tran\Desktop\Windows11Upgrade-main\Windows11Upgrade-main\Windows11Upgrade\obj\Release\Windows11Upgrade.win11_upgradeSelection.resources
+C:\Users\Gia Hai Tran\Desktop\Windows11Upgrade-main\Windows11Upgrade-main\Windows11Upgrade\obj\Release\Windows11Upgrade.Properties.Resources.resources
+C:\Users\Gia Hai Tran\Desktop\Windows11Upgrade-main\Windows11Upgrade-main\Windows11Upgrade\obj\Release\Windows11Upgrade.csproj.GenerateResource.Cache
+C:\Users\Gia Hai Tran\Desktop\Windows11Upgrade-main\Windows11Upgrade-main\Windows11Upgrade\obj\Release\Windows11UnsupportedUpgrade.exe
+C:\Users\Gia Hai Tran\Desktop\Windows11Upgrade-main\Windows11Upgrade-main\Windows11Upgrade\obj\Release\Windows11UnsupportedUpgrade.pdb
+C:\Users\Gia Hai Tran\Desktop\Windows11Upgrade-main\Windows11Upgrade-main\Windows11Upgrade\obj\Release\Windows11Upgrade.csprojResolveAssemblyReference.cache
+C:\Users\giath\Desktop\Windows11Upgrade-main\Windows11Upgrade-main\Windows11Upgrade\bin\Release\Windows11UnsupportedUpgrade.exe.config
+C:\Users\giath\Desktop\Windows11Upgrade-main\Windows11Upgrade-main\Windows11Upgrade\obj\Release\Windows11UnsupportedUpgrade.exe
+C:\Users\giath\Desktop\Windows11Upgrade-main\Windows11Upgrade-main\Windows11Upgrade\obj\Release\Windows11UnsupportedUpgrade.pdb
+C:\Users\giath\Desktop\Windows11Upgrade-main\Windows11Upgrade-main\Windows11Upgrade\bin\Release\Windows11UnsupportedUpgrade.exe
+C:\Users\giath\Desktop\Windows11Upgrade-main\Windows11Upgrade-main\Windows11Upgrade\bin\Release\Windows11UnsupportedUpgrade.pdb
+C:\Users\giath\Desktop\Windows11Upgrade-main\Windows11Upgrade-main\Windows11Upgrade\bin\Release\HtmlAgilityPack.dll
+C:\Users\giath\Desktop\Windows11Upgrade-main\Windows11Upgrade-main\Windows11Upgrade\bin\Release\Newtonsoft.Json.dll
+C:\Users\giath\Desktop\Windows11Upgrade-main\Windows11Upgrade-main\Windows11Upgrade\bin\Release\HtmlAgilityPack.pdb
+C:\Users\giath\Desktop\Windows11Upgrade-main\Windows11Upgrade-main\Windows11Upgrade\bin\Release\HtmlAgilityPack.xml
+C:\Users\giath\Desktop\Windows11Upgrade-main\Windows11Upgrade-main\Windows11Upgrade\bin\Release\Newtonsoft.Json.xml
+C:\Users\giath\Desktop\Windows11Upgrade-main\Windows11Upgrade-main\Windows11Upgrade\obj\Release\Windows11Upgrade.csprojResolveAssemblyReference.cache
+C:\Users\giath\Desktop\Windows11Upgrade-main\Windows11Upgrade-main\Windows11Upgrade\obj\Release\Windows11Upgrade.win11_downloadSelection.resources
+C:\Users\giath\Desktop\Windows11Upgrade-main\Windows11Upgrade-main\Windows11Upgrade\obj\Release\Windows11Upgrade.win11_upgradeSelection.resources
+C:\Users\giath\Desktop\Windows11Upgrade-main\Windows11Upgrade-main\Windows11Upgrade\obj\Release\Windows11Upgrade.Properties.Resources.resources
+C:\Users\giath\Desktop\Windows11Upgrade-main\Windows11Upgrade-main\Windows11Upgrade\obj\Release\Windows11Upgrade.csproj.GenerateResource.Cache
+C:\Users\giath\Documents\GitHub\W11UU\Windows11Upgrade\bin\Release\Windows11UnsupportedUpgrade.exe.config
+C:\Users\giath\Documents\GitHub\W11UU\Windows11Upgrade\obj\Release\Windows11UnsupportedUpgrade.exe
+C:\Users\giath\Documents\GitHub\W11UU\Windows11Upgrade\obj\Release\Windows11UnsupportedUpgrade.pdb

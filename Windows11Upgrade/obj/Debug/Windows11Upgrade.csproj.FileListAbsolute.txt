@@ -1,0 +1,15 @@
+C:\Users\Gia Hai Tran\Desktop\Windows11Upgrade-main\Windows11Upgrade-main\Windows11Upgrade\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Gia Hai Tran\Desktop\Windows11Upgrade-main\Windows11Upgrade-main\Windows11Upgrade\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Gia Hai Tran\Desktop\Windows11Upgrade-main\Windows11Upgrade-main\Windows11Upgrade\obj\Debug\Windows11Upgrade.csprojResolveAssemblyReference.cache
+C:\Users\Gia Hai Tran\Desktop\Windows11Upgrade-main\Windows11Upgrade-main\Windows11Upgrade\obj\Debug\Windows11Upgrade.win11_downloadSelection.resources
+C:\Users\Gia Hai Tran\Desktop\Windows11Upgrade-main\Windows11Upgrade-main\Windows11Upgrade\obj\Debug\Windows11Upgrade.win11_upgradeSelection.resources
+C:\Users\Gia Hai Tran\Desktop\Windows11Upgrade-main\Windows11Upgrade-main\Windows11Upgrade\obj\Debug\Windows11Upgrade.Properties.Resources.resources
+C:\Users\Gia Hai Tran\Desktop\Windows11Upgrade-main\Windows11Upgrade-main\Windows11Upgrade\obj\Debug\Windows11Upgrade.csproj.GenerateResource.Cache
+C:\Users\Gia Hai Tran\Desktop\Windows11Upgrade-main\Windows11Upgrade-main\Windows11Upgrade\bin\Debug\HtmlAgilityPack.dll
+C:\Users\Gia Hai Tran\Desktop\Windows11Upgrade-main\Windows11Upgrade-main\Windows11Upgrade\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\Gia Hai Tran\Desktop\Windows11Upgrade-main\Windows11Upgrade-main\Windows11Upgrade\bin\Debug\HtmlAgilityPack.xml
+C:\Users\Gia Hai Tran\Desktop\Windows11Upgrade-main\Windows11Upgrade-main\Windows11Upgrade\bin\Debug\Windows11UnsupportedUpgrade.exe.config
+C:\Users\Gia Hai Tran\Desktop\Windows11Upgrade-main\Windows11Upgrade-main\Windows11Upgrade\bin\Debug\Windows11UnsupportedUpgrade.exe
+C:\Users\Gia Hai Tran\Desktop\Windows11Upgrade-main\Windows11Upgrade-main\Windows11Upgrade\bin\Debug\Windows11UnsupportedUpgrade.pdb
+C:\Users\Gia Hai Tran\Desktop\Windows11Upgrade-main\Windows11Upgrade-main\Windows11Upgrade\obj\Debug\Windows11UnsupportedUpgrade.exe
+C:\Users\Gia Hai Tran\Desktop\Windows11Upgrade-main\Windows11Upgrade-main\Windows11Upgrade\obj\Debug\Windows11UnsupportedUpgrade.pdb
