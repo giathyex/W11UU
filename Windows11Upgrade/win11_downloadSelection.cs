@@ -257,6 +257,12 @@ namespace Windows11Upgrade
         }
         private void wusacallshell_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
         {
+            wusarunning();
+        }
+        private void wusarunning()
+        {
+            wusabutton.Visible = false;
+            powershelloutput.Text = "Quá trình cài đặt đã bắt đầu, máy có thể sẽ yêu cầu khởi động lại. Bạn có thể đóng cửa sổ này sau khi cài đặt thành công";
         }
 
         // ===========================================================================================================================================
@@ -265,10 +271,6 @@ namespace Windows11Upgrade
         {
             string sinstall = "wusa.exe " + downloadedfile;
             wusacallshell.RunWorkerAsync(argument: sinstall);
-
-            wusabutton.Visible = false;
-            loadingbar2.Visible = true;
-            powershelloutput.Text = "Vui lòng chờ quá trình cài đặt hoàn tất. Máy có thể sẽ khởi động lại.";
         }
 
 
