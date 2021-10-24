@@ -12,7 +12,7 @@ namespace Windows11Upgrade {
             }
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new win11_upgradeSelection());
+            Application.Run(new w11uu_start());
         }
     }
 }

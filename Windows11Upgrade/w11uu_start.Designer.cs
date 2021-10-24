@@ -1,7 +1,7 @@
 ﻿
 namespace Windows11Upgrade
 {
-    partial class win11_upgradeSelection
+    partial class w11uu_start
     {
         /// <summary>
         /// Required designer variable.
@@ -29,12 +29,13 @@ namespace Windows11Upgrade
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(win11_upgradeSelection));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(w11uu_start));
             this.lbl_choice = new System.Windows.Forms.Label();
-            this.btn_downloadIso = new System.Windows.Forms.Button();
+            this.autodownload = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.manualdownload = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,26 +51,26 @@ namespace Windows11Upgrade
             this.lbl_choice.Text = "Tool update Windows 11\r\ncho máy không được hỗ trợ";
             this.lbl_choice.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // btn_downloadIso
+            // autodownload
             // 
-            this.btn_downloadIso.BackColor = System.Drawing.Color.Transparent;
-            this.btn_downloadIso.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_downloadIso.BackgroundImage")));
-            this.btn_downloadIso.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_downloadIso.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_downloadIso.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btn_downloadIso.FlatAppearance.BorderSize = 0;
-            this.btn_downloadIso.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn_downloadIso.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn_downloadIso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_downloadIso.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_downloadIso.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btn_downloadIso.Location = new System.Drawing.Point(321, 327);
-            this.btn_downloadIso.Name = "btn_downloadIso";
-            this.btn_downloadIso.Size = new System.Drawing.Size(240, 42);
-            this.btn_downloadIso.TabIndex = 3;
-            this.btn_downloadIso.Text = "Bắt đầu cập nhật";
-            this.btn_downloadIso.UseVisualStyleBackColor = false;
-            this.btn_downloadIso.Click += new System.EventHandler(this.btn_downloadIso_Click_1);
+            this.autodownload.BackColor = System.Drawing.Color.Transparent;
+            this.autodownload.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("autodownload.BackgroundImage")));
+            this.autodownload.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.autodownload.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.autodownload.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.autodownload.FlatAppearance.BorderSize = 0;
+            this.autodownload.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.autodownload.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.autodownload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.autodownload.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.autodownload.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.autodownload.Location = new System.Drawing.Point(321, 268);
+            this.autodownload.Name = "autodownload";
+            this.autodownload.Size = new System.Drawing.Size(240, 42);
+            this.autodownload.TabIndex = 3;
+            this.autodownload.Text = "Kiểm tra cập nhật tự động";
+            this.autodownload.UseVisualStyleBackColor = false;
+            this.autodownload.Click += new System.EventHandler(this.autodownload_Click);
             // 
             // pictureBox1
             // 
@@ -105,22 +106,43 @@ namespace Windows11Upgrade
             this.linkLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.linkLabel1.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             // 
-            // win11_upgradeSelection
+            // manualdownload
+            // 
+            this.manualdownload.BackColor = System.Drawing.Color.Transparent;
+            this.manualdownload.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("manualdownload.BackgroundImage")));
+            this.manualdownload.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.manualdownload.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.manualdownload.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.manualdownload.FlatAppearance.BorderSize = 0;
+            this.manualdownload.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.manualdownload.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.manualdownload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.manualdownload.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.manualdownload.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.manualdownload.Location = new System.Drawing.Point(321, 320);
+            this.manualdownload.Name = "manualdownload";
+            this.manualdownload.Size = new System.Drawing.Size(240, 42);
+            this.manualdownload.TabIndex = 7;
+            this.manualdownload.Text = "Tải cập nhật theo yêu cầu";
+            this.manualdownload.UseVisualStyleBackColor = false;
+            this.manualdownload.Click += new System.EventHandler(this.manualdownload_Click);
+            // 
+            // w11uu_start
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(634, 441);
+            this.Controls.Add(this.manualdownload);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbl_choice);
-            this.Controls.Add(this.btn_downloadIso);
+            this.Controls.Add(this.autodownload);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "win11_upgradeSelection";
+            this.Name = "w11uu_start";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Windows 11 Unsupported Upgrade";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.exit);
@@ -132,10 +154,11 @@ namespace Windows11Upgrade
         #endregion
 
         private System.Windows.Forms.Label lbl_choice;
-        private System.Windows.Forms.Button btn_downloadIso;
+        private System.Windows.Forms.Button autodownload;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Button manualdownload;
     }
 }
 

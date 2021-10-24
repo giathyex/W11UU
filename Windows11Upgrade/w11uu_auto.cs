@@ -10,10 +10,10 @@ using System.Text.RegularExpressions;
 
 namespace Windows11Upgrade
 {
-    public partial class win11_downloadSelection : Form
+    public partial class w11uu_auto : Form
     {
 
-        public win11_downloadSelection()
+        public w11uu_auto()
         {
             InitializeComponent();
         }
@@ -164,36 +164,45 @@ namespace Windows11Upgrade
         }
         private void showtextbox()
         {
-            if (nextclick == 1)
+            try
             {
-                int nhh = spsoutput.IndexOf(":");
-                int nhh2 = spsoutput.IndexOf("Size");
-                string name = spsoutput.Substring((nhh + 2), (nhh2 - nhh - 3));
-                nhh2 = nhh2 + 8;
-                string name2 = spsoutput.Substring(nhh2);
-                powershelloutput.Text = name + "\n \n" + name2;
+                if (nextclick == 1)
+                {
+                    int nhh = spsoutput.IndexOf(":");
+                    int nhh2 = spsoutput.IndexOf("Size");
+                    string name = spsoutput.Substring((nhh + 2), (nhh2 - nhh - 3));
+                    nhh2 = nhh2 + 8;
+                    string name2 = spsoutput.Substring(nhh2);
+                    powershelloutput.Text = name + "\n \n" + name2;
 
-                shellbuttonkb.Visible = true;
+                    shellbuttonkb.Visible = true;
+                }
+                else if (nextclick == 2)
+                {
+                    int nhh = spsoutput.IndexOf(":");
+                    int nhh2 = spsoutput.IndexOf("Size (MB)");
+                    int nhh3 = spsoutput.IndexOf("FullName");
+                    string name = spsoutput.Substring((nhh + 2), (nhh2 - nhh - 3));
+                    string name2 = spsoutput.Substring((nhh2 + 12), (nhh3 - nhh2 - 14));
+                    string name3 = spsoutput.Substring((nhh3 + 12));
+                    name3 = Regex.Replace(name3, " {2,}", "");
+                    name3 = Regex.Replace(name3, @"\t|\n|\r", "");
+                    powershelloutput.Text = name + "\n \n" + name2 + " MB \n \n" + name3;
+
+                    // Get file name for wusa.exe
+                    downloadedfile = name3;
+
+                    wusabutton.Visible = true;
+                }
+                loadingbar2.Visible = false;
             }
-            else if (nextclick == 2)
+            catch (Exception ex)
             {
-                int nhh = spsoutput.IndexOf(":");
-                int nhh2 = spsoutput.IndexOf("Size (MB)");
-                int nhh3 = spsoutput.IndexOf("FullName");
-                string name = spsoutput.Substring((nhh + 2), (nhh2 - nhh - 3));
-                string name2 = spsoutput.Substring((nhh2 + 12), (nhh3 - nhh2 - 14));
-                string name3 = spsoutput.Substring((nhh3 + 12));
-                name3 = Regex.Replace(name3, " {2,}", "");
-                name3 = Regex.Replace(name3, @"\t|\n|\r", "");
-                powershelloutput.Text = name + "\n \n" + name2 + " MB \n \n" + name3;
-
-                // Get file name for wusa.exe
-                downloadedfile = name3;
-
-                wusabutton.Visible = true;
-
+                DialogResult dialog = MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (dialog == DialogResult.OK)
+                    Environment.Exit(0);
             }
-            loadingbar2.Visible = false;
+           
         }
 
         // ===========================================================================================================================================

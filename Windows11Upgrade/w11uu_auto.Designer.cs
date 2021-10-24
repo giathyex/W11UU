@@ -1,7 +1,7 @@
 ﻿
 namespace Windows11Upgrade
 {
-    partial class win11_downloadSelection
+    partial class w11uu_auto
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace Windows11Upgrade
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(win11_downloadSelection));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(w11uu_auto));
             this.curver = new System.Windows.Forms.Label();
             this.curver_build = new System.Windows.Forms.Label();
             this.newver = new System.Windows.Forms.Label();
@@ -328,7 +328,7 @@ namespace Windows11Upgrade
             this.errordetail.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.errordetail.Visible = false;
             // 
-            // win11_downloadSelection
+            // w11uu_auto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -356,8 +356,7 @@ namespace Windows11Upgrade
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "win11_downloadSelection";
+            this.Name = "w11uu_auto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Windows 11 Unsupported Upgrade";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.exit);
