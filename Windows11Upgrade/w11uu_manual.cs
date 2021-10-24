@@ -90,6 +90,16 @@ namespace Windows11Upgrade
         }
 
         // ===========================================================================================================================================
+        // Check input string
+        private void textchanged(object sender, EventArgs e)
+        {
+            if ((inputb.Text.Contains("KB")) && (inputb.Text.Length == 9) && (!inputb.Text.Contains(" ")))
+                downbutton.Enabled = true;
+            else
+                downbutton.Enabled = false;
+        }
+
+        // ===========================================================================================================================================
         // Tai ban cap nhat clicked (Get-KbUpdate)
         private void downbutton_Click(object sender, EventArgs e)
         {
@@ -167,6 +177,10 @@ namespace Windows11Upgrade
             wusacallshell.RunWorkerAsync(argument: sinstall);
         }
 
+
+        // ===========================================================================================================================================
+        // ===========================================================================================================================================
+        // Exit
         private void exit(object sender, FormClosedEventArgs e)
         {
             Environment.Exit(0);

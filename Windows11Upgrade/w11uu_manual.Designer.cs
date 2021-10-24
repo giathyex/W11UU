@@ -59,6 +59,7 @@
             this.inputb.Size = new System.Drawing.Size(235, 18);
             this.inputb.TabIndex = 0;
             this.inputb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.inputb.TextChanged += new System.EventHandler(this.textchanged);
             // 
             // beginlabel
             // 
@@ -89,6 +90,7 @@
             this.downbutton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("downbutton.BackgroundImage")));
             this.downbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.downbutton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.downbutton.Enabled = false;
             this.downbutton.FlatAppearance.BorderSize = 0;
             this.downbutton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.downbutton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
