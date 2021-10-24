@@ -53,6 +53,7 @@ By knowing those two, it is completely possible to download any Cumulative Updat
   <br>
   Installing the update with wusa.exe
   <br>
+  <br>
   <img src="DemoPics/3.png">
   <br>
   You can type the KB update names manually to download and install if you want
@@ -61,6 +62,7 @@ By knowing those two, it is completely possible to download any Cumulative Updat
   <img src="DemoPics/4.png">
   <br>
   No update available
+  <br>
 </p>
 
 ## Credits
