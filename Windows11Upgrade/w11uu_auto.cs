@@ -206,7 +206,7 @@ namespace Windows11Upgrade
         }
 
         // ===========================================================================================================================================
-        // Tai ban cap nhat clicked (Kiem tra cap nhat)
+        // Tai ban cap nhat clicked (Get-KbUpdate)
         private void downbutton_Click(object sender, EventArgs e)
         {
             spsoutput = "";
@@ -215,6 +215,8 @@ namespace Windows11Upgrade
             string checkforkb = "Get-KbUpdate -Name " + snewver_kb + " -Architecture x64 -Simple";
             shellKBrunner.RunWorkerAsync(argument: checkforkb);
 
+            beginlabel.Visible = false;
+            beginsublabel.Visible = false;
             curver.Visible = false;
             curver_build.Visible = false;
             newver.Visible = false;
@@ -229,7 +231,7 @@ namespace Windows11Upgrade
 
 
         // ===========================================================================================================================================
-        // Confirm Download (Xac nhan tai xuong clicked)
+        // Xac nhan tai xuong clicked (Save-KbUpdate)
         private void shellbuttonkb_Click(object sender, EventArgs e)
         {
             spsoutput = "";

@@ -64,7 +64,7 @@ namespace Windows11Upgrade
             this.autodownload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.autodownload.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.autodownload.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.autodownload.Location = new System.Drawing.Point(321, 268);
+            this.autodownload.Location = new System.Drawing.Point(321, 262);
             this.autodownload.Name = "autodownload";
             this.autodownload.Size = new System.Drawing.Size(240, 42);
             this.autodownload.TabIndex = 3;

@@ -50,8 +50,6 @@ namespace Windows11Upgrade
             this.wusabutton = new System.Windows.Forms.Button();
             this.powershelloutput = new System.Windows.Forms.Label();
             this.wusacallshell = new System.ComponentModel.BackgroundWorker();
-            this.errorlabel = new System.Windows.Forms.Label();
-            this.errordetail = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.loadingbar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.loadingbar2)).BeginInit();
@@ -132,7 +130,7 @@ namespace Windows11Upgrade
             this.beginlabel.AutoSize = true;
             this.beginlabel.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.beginlabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.beginlabel.Location = new System.Drawing.Point(69, 64);
+            this.beginlabel.Location = new System.Drawing.Point(68, 64);
             this.beginlabel.Name = "beginlabel";
             this.beginlabel.Size = new System.Drawing.Size(459, 25);
             this.beginlabel.TabIndex = 19;
@@ -145,10 +143,10 @@ namespace Windows11Upgrade
             this.beginsublabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.beginsublabel.Location = new System.Drawing.Point(71, 103);
             this.beginsublabel.Name = "beginsublabel";
-            this.beginsublabel.Size = new System.Drawing.Size(452, 34);
+            this.beginsublabel.Size = new System.Drawing.Size(453, 34);
             this.beginsublabel.TabIndex = 20;
-            this.beginsublabel.Text = "Tải và cài đặt các bản cập nhật tích lũy cho Windows 11 thông qua file .msu \r\ntừ " +
-    "Microsoft Update Catalog";
+            this.beginsublabel.Text = "Tự động kiểm tra, tải xuống bản cập nhật tích lũy mới nhất cho Windows 11 \r\ntừ Mi" +
+    "crosoft Update Catalog và cài đặt nó bằng wusa.exe";
             // 
             // checkupbutton
             // 
@@ -280,7 +278,7 @@ namespace Windows11Upgrade
             this.wusabutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.wusabutton.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.wusabutton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.wusabutton.Location = new System.Drawing.Point(196, 282);
+            this.wusabutton.Location = new System.Drawing.Point(197, 282);
             this.wusabutton.Name = "wusabutton";
             this.wusabutton.Size = new System.Drawing.Size(240, 42);
             this.wusabutton.TabIndex = 30;
@@ -304,38 +302,12 @@ namespace Windows11Upgrade
             this.wusacallshell.DoWork += new System.ComponentModel.DoWorkEventHandler(this.wusacallshell_DoWork);
             this.wusacallshell.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.wusacallshell_RunWorkerCompleted);
             // 
-            // errorlabel
-            // 
-            this.errorlabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.errorlabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.errorlabel.Location = new System.Drawing.Point(74, 198);
-            this.errorlabel.Name = "errorlabel";
-            this.errorlabel.Size = new System.Drawing.Size(493, 21);
-            this.errorlabel.TabIndex = 32;
-            this.errorlabel.Text = "Đã có lỗi xảy ra";
-            this.errorlabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.errorlabel.Visible = false;
-            // 
-            // errordetail
-            // 
-            this.errordetail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.errordetail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.errordetail.Location = new System.Drawing.Point(74, 226);
-            this.errordetail.Name = "errordetail";
-            this.errordetail.Size = new System.Drawing.Size(493, 53);
-            this.errordetail.TabIndex = 33;
-            this.errordetail.Text = "Bạn đang dùng bản mới nhất";
-            this.errordetail.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.errordetail.Visible = false;
-            // 
             // w11uu_auto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(634, 441);
-            this.Controls.Add(this.errordetail);
-            this.Controls.Add(this.errorlabel);
             this.Controls.Add(this.loadingbar2);
             this.Controls.Add(this.newver_kb);
             this.Controls.Add(this.logo);
@@ -351,8 +323,8 @@ namespace Windows11Upgrade
             this.Controls.Add(this.powershelloutput);
             this.Controls.Add(this.downbutton);
             this.Controls.Add(this.checkupbutton);
-            this.Controls.Add(this.shellbuttonkb);
             this.Controls.Add(this.wusabutton);
+            this.Controls.Add(this.shellbuttonkb);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -390,7 +362,5 @@ namespace Windows11Upgrade
         private System.Windows.Forms.Button wusabutton;
         private System.Windows.Forms.Label powershelloutput;
         private System.ComponentModel.BackgroundWorker wusacallshell;
-        private System.Windows.Forms.Label errorlabel;
-        private System.Windows.Forms.Label errordetail;
     }
 }
