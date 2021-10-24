@@ -6,7 +6,7 @@
   <br>
 </p>
 
-
+<br><br>
 
 Microsoft said that if you try to install Windows 11 on unsupported computers, they will not allow you to receive any Cumulative Updates directly in Settings. 
 
