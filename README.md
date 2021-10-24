@@ -20,6 +20,8 @@ Briefly, about the mechanism of action, there are two things you need to keep in
 
 By knowing those two, it is completely possible to download any Cumulative Update and install it on Windows 11 without any additional tools. This tool just automates that process by parsing the HTML at Microsoft's website to determine which updates to download in the Microsoft Update Catalog and then using Chrissy LeMaire's Powershell script (trimmed and tweaked) to download. Finally, call wusa.exe to install the downloaded update.
 
+Still under development and hasn't been tested under a good amount of circumstances. ISO download and install for Feature Update with be integrated soon. Feel free to use my code and create whatever you like. Together we can fight against the giants that force us to do what they think is right.
+
 ## Pictures
 
 <p align="center">
