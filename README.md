@@ -15,19 +15,20 @@ While what they said is wrong now, unsupported computers still can receive Cumul
 This is not the tool to install Windows 11 for unsupported computers. It is the tool to install Cumulative Updates for computers running Windows 11 without using Windows Update in Settings.
 
 Briefly, about the mechanism of action, there are two things you need to keep in mind:
-- Updates received from Windows Update in Settings can be downloaded manually from Microsoft Update Catalog (https://catalog.update.microsoft.com) in .msu file format.
+- Updates received from Windows Update in Settings can be downloaded manually from [Microsoft Update Catalog](https://catalog.update.microsoft.com) in .msu file format.
 - Windows always have a so-called "Windows Update Standalone Installer", or wusa.exe to install .msu updates without a network connection, commonly used for business computers and specialized industrial computers.
 
 By knowing those two, it is completely possible to download any Cumulative Update and install it on Windows 11 without any additional tools. This tool just automates that process by parsing the HTML at Microsoft's website to determine which updates to download in the Microsoft Update Catalog and then using Chrissy LeMaire's Powershell script (trimmed and tweaked) to download. Finally, call wusa.exe to install the downloaded update.
 
 <br>
 
-# Pictures
+## Pictures
 
 <p align="center">
   <br>
   <img src="DemoPics/1.png">
   <br>
+  Main Menu
   <br>
   <img src="DemoPics/2.png">
   <br>
@@ -50,3 +51,6 @@ By knowing those two, it is completely possible to download any Cumulative Updat
   <img src="DemoPics/4.png">
   <br>
 </p>
+
+## Credits
+Credits to Credits to [Chrissy LeMaire](https://github.com/potatoqualitee/kbupdate) for kbupdate Powershell script.
