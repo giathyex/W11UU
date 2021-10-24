@@ -26,7 +26,7 @@ By knowing those two, it is completely possible to download any Cumulative Updat
   <br>
   <img src="DemoPics/1.png">
   <br>
-  Main Menu
+  Main menu, you can type the updates name manually or let the tool check for newewst update
   <br>
   <br>
   <img src="DemoPics/2.png">
