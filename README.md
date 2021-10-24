@@ -68,4 +68,4 @@ Still under development and hasn't been tested under a good amount of circumstan
 </p>
 
 ## Credits
-Credits to [Chrissy LeMaire](https://github.com/potatoqualitee/kbupdate) for kbupdate Powershell script.
+Credits to [Chrissy LeMaire (potatoqualitee)](https://github.com/potatoqualitee/kbupdate) for kbupdate Powershell script.
