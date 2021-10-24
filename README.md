@@ -26,29 +26,41 @@ By knowing those two, it is completely possible to download any Cumulative Updat
   <br>
   <img src="DemoPics/1.png">
   <br>
-  Main menu, you can type the updates name manually or let the tool check for newewst update
+  Main menu, you can type the KB name manually or let the tool detect the newest update
   <br>
   <br>
   <img src="DemoPics/2.png">
   <br>
+  Check for newest update by parsing Microsoft's website
+  <br>
   <br>
   <img src="DemoPics/5.png">
+  <br>
+  New update available, you can download it
   <br>
   <br>
   <img src="DemoPics/6.png">
   <br>
+  Confirm to download the update from Microsoft Update Catalog
+  <br>
   <br>
   <img src="DemoPics/7.png">
+  <br>
+  Download completed sucessfully, you can install it with wusa.exe
   <br>
   <br>
   <img src="DemoPics/8.png">
   <br>
+  Installing the update with wusa.exe
   <br>
   <img src="DemoPics/3.png">
+  <br>
+  You can type the KB update names manually to download and install if you want
   <br>
   <br>
   <img src="DemoPics/4.png">
   <br>
+  No update available
 </p>
 
 ## Credits
