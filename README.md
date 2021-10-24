@@ -6,6 +6,8 @@
   <br>
 </p>
 
+
+
 Microsoft said that if you try to install Windows 11 on unsupported computers, they will not allow you to receive any Cumulative Updates directly in Settings. 
 
 While what they said is wrong now, unsupported computers still can receive Cumulative Updates directly in Settings. But no one can be sure that Microsoft will not change their mind. If in the future for some reason they change their mind, this is the tool to install Cumulative Updates on unsupported computers.
