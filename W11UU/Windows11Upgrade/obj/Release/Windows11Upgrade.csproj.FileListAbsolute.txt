@@ -44,3 +44,6 @@ C:\Users\giath\Documents\GitHub\W11UU\Windows11Upgrade\bin\Release\Newtonsoft.Js
 C:\Users\giath\Documents\GitHub\W11UU\Windows11Upgrade\obj\Release\Windows11Upgrade.w11uu_auto.resources
 C:\Users\giath\Documents\GitHub\W11UU\Windows11Upgrade\obj\Release\Windows11Upgrade.w11uu_start.resources
 C:\Users\giath\Documents\GitHub\W11UU\Windows11Upgrade\obj\Release\Windows11Upgrade.w11uu_manual.resources
+C:\Users\giath\Documents\GitHub\W11UU\W11UU\Windows11Upgrade\bin\Release\Windows11UnsupportedUpgrade.exe.config
+C:\Users\giath\Documents\GitHub\W11UU\W11UU\Windows11Upgrade\obj\Release\Windows11UnsupportedUpgrade.exe
+C:\Users\giath\Documents\GitHub\W11UU\W11UU\Windows11Upgrade\obj\Release\Windows11UnsupportedUpgrade.pdb
